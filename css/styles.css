@@ -1,0 +1,25 @@
+.content-color{
+    background-color: #f0f8ff; 
+}
+input.error {
+	border: 1px solid #ff0000;
+}
+label.error {
+	color: #ff0000;
+	font-weight: normal;
+}
+.red {
+    color: #ff0000;
+}
+#load {
+	visibility: hidden;
+	}
+.ld {
+	text-align: center;
+	}
+#check {
+	visibility: hidden;
+}
+.cab {
+	visibility: hidden;
+}
