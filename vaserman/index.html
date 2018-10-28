@@ -10,13 +10,28 @@
     <div class="container">
         <div class="row"><h1>Тест</h1></div>
         <div class="row">
+            <p>Перед Вами опросник отношения к времени. </p>
+            <p>Он состоит из трех таблиц "Настоящее", "Прошлое", "Будущее", которые включают 25 прилагательных.</p>
+            <p>Из каждой пары прилагательных Вам следует выбрать одно, наиболее подходящее.</p>
+            <p>Цифры в таблице отображают степень выбранного прилагательного. 1 - слабая степень, 2 - умеренная, 3 - сильная.</p>
+            <p>Так, например, настоящее для Вас длительное, а по степени выраженности 2 - умеренная. Значит Вы отмечаете:</p>
+            <p><img src="img/example.png" class="img-fluid" alt="Responsive image"></p>
+        </div>
+        <div class="row"><p>Долго думать не нужно, выбирайте первое, что придет в голову.</p></div>
+        <div class="row">
             <h3>Настоящее</h3>
         </div>
+        <div class="row">    
+                <p>Выберите прилагательные, которые наиболее отражают Ваше отношение к НАСТОЯЩЕМУ времени.</p>
+            </div>
         <div class="row">    
             <div id="table1"></div>
         </div>
         <div class="row">
             <h3>Прошлое</h3>
+        </div>
+        <div class="row">
+            <p>Выберите прилагательные, которые наиболее отражают Ваше отношение к ПРОШЛОМУ времени.</p>
         </div>
         <div class="row">
             <div id="table2"></div>
@@ -25,11 +40,15 @@
             <h3>Будущее</h3>
         </div>
         <div class="row">
+                <p>Выберите прилагательные, которые наиболее отражают Ваше отношение к БУДУЩЕМУ времени.</p>
+                <p>Оцените то, как Вы реально представляете свое БУДУЩЕЕ время, а не то, каким Вы хотите его видеть.</p>
+        </div>
+        <div class="row">
             <div id="table3"></div>
         </div>
         <div class="row">
             <div class="col offset-md-2">
-                <button type="button" class="btn btn-primary" onclick="getResult()">Получить результат</button>
+                <button type="button" class="btn btn-primary" onclick="getResult()">Получить результат (появится снизу)</button>
             </div>
         </div>
         <div class="row">
@@ -39,6 +58,7 @@
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <!-- <script src="js/jquery.scrollTo.min.js"></script> -->
     <script src="js/data.js"></script>
     <script src="js/script.js"></script>
     <script>

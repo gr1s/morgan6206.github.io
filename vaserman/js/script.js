@@ -153,6 +153,7 @@ function countInTable(tableNumber, criterianNumber, value){
 
 
 function getResult(){
+   
     console.log(selectedRow_1);
     console.log(selectedRow_2);
     console.log(selectedRow_3);
@@ -173,4 +174,6 @@ function getResult(){
     resultView +='<tr><th scope="row">Сумма</th><td>'+sum_1+'</td><td>'+sum_2+'</td><td>'+sum_3+'</td></tr>';
     resultView += '</tbody></table>';
     $('#result').html(resultView); 
+    var destination = $('#result').offset().top;
+    $('html').animate({ scrollTop: destination }, 1100);
 }
