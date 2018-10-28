@@ -171,9 +171,9 @@ function checkAllSelectedRow(){
 }
 
 function getResult(){
-    console.log(selectedRow_1);
-    console.log(selectedRow_2);
-    console.log(selectedRow_3);
+    // console.log(selectedRow_1);
+    // console.log(selectedRow_2);
+    // console.log(selectedRow_3);
     // console.log('table1; AV='+countAV_0+'; EO='+countEO_0+'; VV='+countVV_0+'; SV='+countSV_0+'; OV='+countOV_0);
     // console.log('table2; AV='+countAV_1+'; EO='+countEO_1+'; VV='+countVV_1+'; SV='+countSV_1+'; OV='+countOV_1);
     // console.log('table3; AV='+countAV_2+'; EO='+countEO_2+'; VV='+countVV_2+'; SV='+countSV_2+'; OV='+countOV_2);
