@@ -20,16 +20,30 @@ function fillTable(tableNumber, data){
     var table = '<table class="table table-bordered">';
     for(var i=0; i<25; i++)
         {
-            table += '<tr>';
-            table +='<td>'+data.table[i][0]+'</td>';  
-            table +='<td><button type="button" class="btn btn-default" onclick="countValues('+tableNumber+','+i+',3, this)">3</button></td>';
-            table +='<td><button type="button" class="btn btn-default" onclick="countValues('+tableNumber+','+i+',2, this)">2</button></td>';
-            table +='<td><button type="button" class="btn btn-default" onclick="countValues('+tableNumber+','+i+',1, this)">1</button></td>';
-            table +='<td><button type="button" class="btn btn-default" onclick="countValues('+tableNumber+','+i+',-1, this)">1</button></td>';
-            table +='<td><button type="button" class="btn btn-default" onclick="countValues('+tableNumber+','+i+',-2, this)">2</button></td>';
-            table +='<td><button type="button" class="btn btn-default" onclick="countValues('+tableNumber+','+i+',-3, this)">3</button></td>';
-            table +='<td>'+data.table[i][1]+'</td>';
-            table += '</tr>';
+            if(i==10 || i==14 || i==17 || i==18 || i==22){
+                table += '<tr>';
+                table +='<td>'+data.table[i][0]+'</td>';  
+                table +='<td><button type="button" class="btn btn-default" onclick="countValues('+tableNumber+','+i+',-3, this)">3</button></td>';
+                table +='<td><button type="button" class="btn btn-default" onclick="countValues('+tableNumber+','+i+',-2, this)">2</button></td>';
+                table +='<td><button type="button" class="btn btn-default" onclick="countValues('+tableNumber+','+i+',-1, this)">1</button></td>';
+                table +='<td><button type="button" class="btn btn-default" onclick="countValues('+tableNumber+','+i+',1, this)">1</button></td>';
+                table +='<td><button type="button" class="btn btn-default" onclick="countValues('+tableNumber+','+i+',2, this)">2</button></td>';
+                table +='<td><button type="button" class="btn btn-default" onclick="countValues('+tableNumber+','+i+',3, this)">3</button></td>';
+                table +='<td>'+data.table[i][1]+'</td>';
+                table += '</tr>';
+            }
+            else{
+                table += '<tr>';
+                table +='<td>'+data.table[i][0]+'</td>';  
+                table +='<td><button type="button" class="btn btn-default" onclick="countValues('+tableNumber+','+i+',3, this)">3</button></td>';
+                table +='<td><button type="button" class="btn btn-default" onclick="countValues('+tableNumber+','+i+',2, this)">2</button></td>';
+                table +='<td><button type="button" class="btn btn-default" onclick="countValues('+tableNumber+','+i+',1, this)">1</button></td>';
+                table +='<td><button type="button" class="btn btn-default" onclick="countValues('+tableNumber+','+i+',-1, this)">1</button></td>';
+                table +='<td><button type="button" class="btn btn-default" onclick="countValues('+tableNumber+','+i+',-2, this)">2</button></td>';
+                table +='<td><button type="button" class="btn btn-default" onclick="countValues('+tableNumber+','+i+',-3, this)">3</button></td>';
+                table +='<td>'+data.table[i][1]+'</td>';
+                table += '</tr>';
+            }
         }
     table +='</table>';
     return table;
