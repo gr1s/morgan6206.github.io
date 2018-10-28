@@ -39,15 +39,15 @@ function countValues(tableNumber, serialNumber, value, button){
     //serialNumber - порядковый номер строки-критерия
     switch (tableNumber) {
         case 0:
-            console.log('table 1');
+            // console.log('table 1');
             countValuesInTables(selectedRow_1, serialNumber, value, tableNumber, button);
             break;
         case 1:
-            console.log('table 2');
+            // console.log('table 2');
             countValuesInTables(selectedRow_2, serialNumber, value, tableNumber, button)
             break;
         case 2:
-            console.log('table 3');
+            // console.log('table 3');
             countValuesInTables(selectedRow_3, serialNumber, value, tableNumber, button)
             break;
         default:
@@ -151,19 +151,39 @@ function countInTable(tableNumber, criterianNumber, value){
     }
 }
 
+function checkAllSelectedRow(){
+    var error = "nothing";
+    if(selectedRow_1.length!=25 || selectedRow_2.length!=25 || selectedRow_3.length!=25)
+    {
+        var error = "<p>Вы пропустили значения в:</p><ul>";
+        if(selectedRow_1.length!=25){
+            error += "<li>таблице Настоящее</li>";
+        }
+        if(selectedRow_2.length!=25){
+            error += "<li>таблице Прошлое</li>";
+        }
+        if(selectedRow_3.length!=25){
+            error += "<li>таблице Будущее</li>";
+        }
+        error +="</ul>";
+    }
+    return error;
+}
 
 function getResult(){
-   
     console.log(selectedRow_1);
     console.log(selectedRow_2);
     console.log(selectedRow_3);
-    console.log('table1; AV='+countAV_0+'; EO='+countEO_0+'; VV='+countVV_0+'; SV='+countSV_0+'; OV='+countOV_0);
-    console.log('table2; AV='+countAV_1+'; EO='+countEO_1+'; VV='+countVV_1+'; SV='+countSV_1+'; OV='+countOV_1);
-    console.log('table3; AV='+countAV_2+'; EO='+countEO_2+'; VV='+countVV_2+'; SV='+countSV_2+'; OV='+countOV_2);
+    // console.log('table1; AV='+countAV_0+'; EO='+countEO_0+'; VV='+countVV_0+'; SV='+countSV_0+'; OV='+countOV_0);
+    // console.log('table2; AV='+countAV_1+'; EO='+countEO_1+'; VV='+countVV_1+'; SV='+countSV_1+'; OV='+countOV_1);
+    // console.log('table3; AV='+countAV_2+'; EO='+countEO_2+'; VV='+countVV_2+'; SV='+countSV_2+'; OV='+countOV_2);
     var sum_1 = countAV_0+countEO_0+countVV_0+countSV_0+countOV_0;
     var sum_2 = countAV_1+countEO_1+countVV_1+countSV_1+countOV_1;
     var sum_3 = countAV_2+countEO_2+countVV_2+countSV_2+countOV_2;
     var resultView = '<h3>Результат</h3>';
+    if(checkAllSelectedRow()!="nothing"){
+        resultView += checkAllSelectedRow();
+    }
     resultView += '<table class="table"><thead><tr><th scope="col">#</th>';
     resultView +='<th scope="col">Настоящее</th><th scope="col">Прошлое</th><th scope="col">Будущее</th></tr></thead><tbody>'
     resultView +='<tr><th scope="row">АВ</th><td>'+countAV_0+'</td><td>'+countAV_1+'</td><td>'+countAV_2+'</td></tr>';  
